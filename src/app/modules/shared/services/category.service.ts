@@ -7,6 +7,7 @@ const base_url = environment.base_url;
 @Injectable({
   providedIn: 'root'
 })
+//**Todo lo escrito aqui es el backend de springboot */
 //**get all the categories */
 export class CategoryService {
 
@@ -17,6 +18,12 @@ export class CategoryService {
     const endpoint = `${base_url}/categories`;
     return this.http.get(endpoint)
   
+  }
+
+  //**save the categories */
+  saveCategories(body: any){
+    const endpoint = `${base_url}/categories`;
+    return this.http.post(endpoint, body);
   }
 
 }
