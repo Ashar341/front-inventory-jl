@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
 import { ConfirmComponent } from 'src/app/modules/shared/components/confirm/confirm.component';
@@ -26,6 +27,9 @@ export class CategoryComponent {
   displayedColumns: string[] = ['id','name', 'description', 'actions'];
   dataSource = new MatTableDataSource<CategoryElement>();
 
+  @ViewChild(MatPaginator)
+  paginator !: MatPaginator;
+
   getCategories(){
     this.categoryService.getCategories()
       .subscribe( (data: any) => {
@@ -48,6 +52,8 @@ export class CategoryComponent {
       });
 
       this.dataSource = new MatTableDataSource<CategoryElement>(dataCategory);
+
+      this.dataSource.paginator = this.paginator;
     }
   }
 /**Busca en angular material el que tiene animaciones */
@@ -103,6 +109,18 @@ export class CategoryComponent {
         this.openSnackbar("Se produjo un error al eliminar la categoria", "Error");
       }
     });
+  }
+
+  buscar(termino: string){
+    if(termino.length === 0){
+      return this.getCategories();
+
+    }
+
+    this.categoryService.getCategorieById(termino).
+      subscribe ( (resp : any) => {
+        this.processCategoriesResponse(resp);
+      })
   }
 
   openSnackbar(message: string, action: string) : MatSnackBarRef<SimpleSnackBar> {

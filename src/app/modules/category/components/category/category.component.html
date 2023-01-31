@@ -4,9 +4,9 @@
 
     <mat-card-header>
         <div>
-            <mat-form-field hintLabel="Busque categoria" appearance="fill">
+            <mat-form-field color="accent" hintLabel="Busque categoria" appearance="fill">
                 <mat-label>Buscar Categorías</mat-label>
-                <input matInput #input>
+                <input matInput #input (keyup)="buscar(input.value)">
 
             </mat-form-field>
         </div>
@@ -18,7 +18,7 @@
         <div class="Agregar">
             <ul>
                 <li>
-                    <button mat-raised-button color="primary" (click)="openCategoryDialog()">Agregar categoria </button>
+                    <button mat-raised-button color="accent" (click)="openCategoryDialog()">Agregar categoria </button>
                 </li>
             </ul>
 
