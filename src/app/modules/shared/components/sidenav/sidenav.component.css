@@ -6,7 +6,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #87CEEB;
+    background-color: #2a91c0;
+}
+
+mat-app-background {
+    background-color: antiquewhite;
 }
 
 .is-mobile .dashboard-toolbar{
@@ -22,6 +26,8 @@ h1.app-name {
 .sidenav-container{
     flex: 1;
 }
+
+ 
 
 .is-mobile .sidenav-container {
     flex: 1 0 auto;
@@ -45,5 +51,19 @@ ul li {
 }
 
 
-
+.fade-in {
+    animation: fadeIn 0.9s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
