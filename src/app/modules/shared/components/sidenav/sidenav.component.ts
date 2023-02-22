@@ -14,7 +14,7 @@ export class SidenavComponent {
   menuNav = [
     {name: "Home", route: "home", icon: "home"},
     {name: "Category", route: "category", icon: "category"},
-    {name: "Items", route: "home", icon: "production_quantity_limits"}
+    {name: "Items", route: "product", icon: "production_quantity_limits"}
   ]
 
   constructor(media: MediaMatcher){
