@@ -45,7 +45,7 @@ export class ProductComponent implements OnInit {
 
       //Aqui se produnfiza mas el metadata para que sea lo del interface ProducElement
       listCProduct.forEach((element: ProductElement) => {
-        element.category = element.category.name;
+        //element.category = element.category.name;
         element.picture = 'data:image/jpeg;base64,'+element.picture;
         dateProduct.push(element); //Guardar los elementos
       });
@@ -56,6 +56,23 @@ export class ProductComponent implements OnInit {
 
 
     }
+  }
+
+  edit(id: number, name: string, price:number, account: number, category: any){
+    const dialogRef = this.dialog.open(NewProductComponent, {
+      width: '450px',
+      data: {id: id, name: name, price: price, account: account, category: category}
+    });
+
+    dialogRef.afterClosed().subscribe((result: any) => {
+      
+      if(result == 1){
+        this.openSnackbar("Producto editado!", "Exitosa");
+        this.getProducts();
+      } else if (result == 2){
+        this.openSnackbar("Se produjo un error al editar el producto", "Error");
+      }
+    });
   }
 
   openProductDialog(){
