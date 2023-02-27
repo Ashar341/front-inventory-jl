@@ -119,4 +119,7 @@ export class NewProductComponent implements OnInit {
       picture: ['', Validators.required],
     })
   }
+
+
+  
 }
