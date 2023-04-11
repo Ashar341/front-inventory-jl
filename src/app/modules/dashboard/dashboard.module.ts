@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { CategoeryModule } from '../category/categoery.module';
 import { ProductModule } from '../product/product.module';
+import { MaterialModule } from '../shared/material.module';
+import { NgChartsModule } from 'ng2-charts';
 
 
 
@@ -18,7 +20,9 @@ import { ProductModule } from '../product/product.module';
     CommonModule,
     SharedModule,
     CategoeryModule,
-    ProductModule
+    ProductModule,
+    MaterialModule,
+    NgChartsModule,
   ]
 })
 export class DashboardModule { }

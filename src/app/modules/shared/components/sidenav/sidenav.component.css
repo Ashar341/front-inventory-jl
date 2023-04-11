@@ -16,7 +16,20 @@ mat-app-background {
 .is-mobile .dashboard-toolbar{
     position: fixed;
     z-index: 2;
+
 }
+
+.dashboard-toolbar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.cosasIzquierda {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
 
 
 h1.app-name {
@@ -26,7 +39,6 @@ h1.app-name {
 .sidenav-container{
     flex: 1;
 }
-
  
 
 .is-mobile .sidenav-container {

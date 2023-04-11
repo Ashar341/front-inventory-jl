@@ -1,0 +1,29 @@
+To deploy your full stack project, you will need to follow several steps. Here is a general outline of what you need to do:
+
+Build your Angular front-end application: You can do this by running the command "ng build" in the terminal. This will create a "dist" folder containing your compiled application.
+
+Build your Spring Boot back-end application: You can do this by running the command "mvn clean install" in the terminal. This will create a "target" folder containing your compiled application.
+
+Install MySQL on your server: If you haven't already done so, you will need to install MySQL on the server that you plan to deploy your application to.
+
+Create a database and configure the connection details: You will need to create a database for your application to use, and configure the connection details in your Spring Boot application.
+
+Copy the compiled front-end files to your server: Copy the contents of the "dist" folder that was created by the "ng build" command to your server.
+
+Copy the compiled back-end files to your server: Copy the jar file that was created by the "mvn clean install" command to your server.
+
+Start the Spring Boot application: You can start your Spring Boot application by running the command "java -jar <name of your jar file>" in the terminal.
+
+Configure your web server: You will need to configure your web server (such as Apache or Nginx) to serve the front-end files and proxy requests to your Spring Boot application.
+
+Test your application: Once you have completed the above steps, you should be able to access your application by visiting the URL of your server in a web browser.
+
+Note that the exact steps may vary depending on your specific setup and deployment environment. Additionally, it is recommended to use a deployment tool such as Jenkins, GitLab, or Travis CI to automate the deployment process and ensure that the latest version of your application is always deployed.
+
+
+
+http://localhost:4200/ es donde esta el proyecto de Angular
+
+la contra de mysql es 1234
+
+Keycloack lo metiste al puerto 8082 y es admin admin, ademas para ashar la contraseña es ashar

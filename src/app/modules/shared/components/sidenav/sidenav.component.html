@@ -3,10 +3,10 @@
     <!--Empieza tool bar-->
     <mat-toolbar color="accent" class="dashboard-toolbar">
         <button mat-icon-button (click)="snav.toggle()"><mat-icon >menu</mat-icon></button>
-        <h1 class="app-name">S-Inventory</h1>
+        <h1 class="app-name">Aplicación de Angular</h1>
 
         <!-- Aqui se usaria flex layout-->
-        <div>
+        <div class="cosasIzquierda">
             <ul>
                 <li>
                     <button mat-icon-button>
@@ -18,7 +18,7 @@
                         <mat-icon>person_outline</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu">
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="logout()">
                             <mat-icon>exit_to_app</mat-icon>
                             Cerrar Sesion
                         </button>
