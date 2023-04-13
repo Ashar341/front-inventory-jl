@@ -37,6 +37,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
     BrowserAnimationsModule,
     KeycloakAngularModule
   ],
+
+  //Con esto se activa el keycloack para activar con docker
   providers: [
     {
       provide: APP_INITIALIZER,

@@ -27,3 +27,11 @@ http://localhost:4200/ es donde esta el proyecto de Angular
 la contra de mysql es 1234
 
 Keycloack lo metiste al puerto 8082 y es admin admin, ademas para ashar la contraseña es ashar
+
+para apagar el vmmem
+wsl --shutdown
+Restart-Service LxssManager
+
+Los ultimos 3 videos de la seccion 10 te dicen una manera para ajustar los programas
+con keycloaks para que se modifique y otorgue las acciones dependiendo
+del nivel del rol dentro de keycloak
